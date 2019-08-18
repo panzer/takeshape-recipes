@@ -1,0 +1,12 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="header">
+    <h1>{{ ingredient.name }}</h1>
+    <ul>
+      {% for item in ingredient.recipeSet.items %}
+        <li>{{item.name}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

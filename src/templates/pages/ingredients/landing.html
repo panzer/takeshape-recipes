@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+    <div class="container">
+        <h2>Ingredients</h2>
+      {% for ingredient in items %}
+          <a href="{{ ingredient | route('ingredient') }}">
+            <p>{{ ingredient.name }}</p>
+          </a>
+      {% endfor %}
+    </div>
+
+    {% set paginationString = 'ingredient.paginate' %}
+    {% set paginationFirstPage = '/ingredient/' %}
+    {% include "partials/pagination.html" %}
+
+{% endblock %}

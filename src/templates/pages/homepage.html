@@ -1,0 +1,14 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <h1>{{ homepage.title }}</h1>
+  {{ homepage.welcomeTextHtml | safe }}
+  {% if homepage.featuredRecipe %}
+  <h3>Featured Recipe!</h3>
+  <div class="hero">
+    <img src="{{ homepage.featuredRecipe.image | image({w: 320, h: 240}) }}">
+    <p>{{ homepage.featuredRecipe.name }}</p>
+  </div>
+  {% endif %}
+
+{% endblock %}

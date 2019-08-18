@@ -1,0 +1,48 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="recipe">
+      <h1>{{ recipe.name }}</h1>
+
+      <div>
+        <img src="{{ recipe.image.path | image }}" class="recipe__image">
+      </div>
+
+      <div class="recipe__description">
+        {{ recipe.descriptionHtml | safe }}
+      </div>
+
+      <ul>
+        {% for ingredient in recipe.ingredients %}
+          <li>
+            {{ingredient.ingredient.name}}{% if ingredient.amount %} -- {{ingredient.amount}}{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <ol>
+          {% for step in recipe.steps %}
+          <li>
+            <p>{{step.instruction}}</p>
+          </li>
+        {% endfor %}
+      </ol>
+      
+      {% if recipe.chefs or recipe.inspriationUrl %}
+        <h2>Inspired by</h2>
+      {% endif %}
+
+      {% for chef in recipe.chefs %}
+
+        <a href="{{ chef | route('chef') }}">
+          {{ chef.name}}
+        </a>
+
+      {% endfor %}
+
+      <a href="{{ recipe.inspirationUrl }}">
+        {{ recipe.inspirationUrl }}
+      </a>
+
+  </div>
+{% endblock %}

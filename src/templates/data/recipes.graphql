@@ -1,0 +1,26 @@
+query {
+    getRecipeList {
+        items {
+            name
+            descriptionHtml
+            image {
+                path
+            }
+            ingredients {
+                amount
+                ingredient {
+                    _id
+                    name
+                }
+            }
+            steps {
+                instruction
+            }
+            inspirationUrl
+            chefs {
+                _id
+                name
+            }
+        }
+    }
+}

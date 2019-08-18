@@ -1,0 +1,46 @@
+templatePath: src/templates
+staticPath: static
+buildPath: build
+
+context:
+  site: data/site.graphql
+
+routes:
+  sitemap:
+    path: /sitemap.xml
+    template: feeds/sitemap.xml
+    context: data/sitemap.graphql
+
+  homepage:
+    path: /
+    template: pages/homepage.html
+    context: data/homepage.graphql
+
+  recipe:
+    path: /recipe/:name/
+    template: pages/recipes/individual.html
+    paginate:
+      pageSize: 4
+      path: /recipe/page-:num/
+      firstPage: /recipe/
+      template: pages/recipes/landing.html
+      data: data/recipes.graphql
+      itemName: recipe
+
+  ingredient:
+    path: /ingredient/:name/
+    template: pages/ingredients/individual.html
+    paginate:
+      pageSize: 10
+      data: data/ingredients.graphql
+      itemName: ingredient
+      path: /ingredient/page-:num/
+      firstPage: /ingredient/
+      template: pages/ingredients/landing.html
+
+  chef:
+    path: /chef/:name/
+    template: pages/chef.html
+    paginate:
+      data: data/chefs.graphql
+      itemName: chefs

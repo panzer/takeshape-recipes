@@ -1,0 +1,17 @@
+.navigation {
+    display: flex;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background-color: darkslategrey;
+    color: white;
+}
+
+.navigation-item {
+    margin: 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+}

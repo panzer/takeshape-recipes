@@ -1,0 +1,14 @@
+query {
+    homepage: getHomepage {
+        _id
+        title
+        welcomeTextHtml
+        featuredRecipe {
+            image {
+                _id
+                path
+            }
+            name
+        }
+    }
+}

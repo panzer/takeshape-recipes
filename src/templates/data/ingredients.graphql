@@ -1,0 +1,15 @@
+query {
+    ingredients: getIngredientList {
+        items {
+            _id
+            name
+            _updatedAt
+            recipeSet {
+                items {
+                    _id
+                    name
+                }
+            }
+        }
+    }
+}

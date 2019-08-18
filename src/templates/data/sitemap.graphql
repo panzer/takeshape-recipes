@@ -1,0 +1,26 @@
+query {
+  homepage: getHomepage {
+    _updatedAt
+  }
+  ingrediens: getIngredientList {
+    total
+    items {
+      name
+      _updatedAt
+    }
+  }
+  chefs: getChefList {
+    total
+    items {
+      name
+      _updatedAt
+    }
+  }
+  recipes: getRecipeList {
+      total
+      items {
+          name
+          _updatedAt
+      }
+  }
+}

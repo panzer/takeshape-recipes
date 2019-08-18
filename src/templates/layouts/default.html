@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Recipes</title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/stylesheets/main.css"/>
+  <link rel="stylesheet" href="/stylesheets/navigation.css"/>
+  <link rel="stylesheet" href="/stylesheets/chef.css"/>
+  <link rel="stylesheet" href="/stylesheets/pagination.css"/>
+  <link rel="stylesheet" href="/stylesheets/recipe.css"/>
+  <link rel="author" href="humans.txt"/>
+</head>
+
+<body>
+
+  {% include 'partials/navigation.html' %}
+  <div class="main">
+    {% block content %}{% endblock %}
+  </div>
+
+<script src="/javascripts/main.js"></script>
+</body>
+</html>

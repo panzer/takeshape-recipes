@@ -1,0 +1,14 @@
+query {
+    getChefList {
+        total
+        items {
+            name
+            biographyHtml
+            photo {
+                path
+                sourceUrl
+            }
+            _updatedAt
+        }
+    }
+}

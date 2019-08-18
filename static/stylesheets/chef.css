@@ -1,0 +1,21 @@
+.chef {
+    margin: 8rem 0;
+  }
+  
+  .chef .container {
+    display: flex;
+  }
+  
+  .chef__image {
+    width: 20rem;
+    height: 20rem;
+    flex: 0 0 20rem;
+    border-radius: 10rem;
+    overflow: hidden;
+  }
+  
+  .chef .content {
+    padding-left: 7.2rem;
+    flex: 1 1 100%;
+  }
+  
