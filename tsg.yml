@@ -44,3 +44,16 @@ routes:
     paginate:
       data: data/chefs.graphql
       itemName: chefs
+
+locales: 
+    en:
+        pathPrefix: ''
+        dates:
+            tz: America/New_York
+            format: LLL
+
+    es-mx:
+        pathPrefix: 'es'
+        dates:
+            tz: America/Mexico_City
+            format: LLL

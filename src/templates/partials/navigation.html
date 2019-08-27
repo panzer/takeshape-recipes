@@ -1,11 +1,11 @@
 <div class="navigation">
-    <a class="navigation-item" href="/">
+    <a class="navigation-item" href="{{ 1 | route('homepage.paginate' )}}">
         Home
     </a>
-    <a class="navigation-item" href="/recipe">
+    <a class="navigation-item" href="{{ 1 | route('recipe.paginate') }}">
         Recipes
     </a>
-    <a class="navigation-item" href="/ingredient">
+    <a class="navigation-item" href="{{ 1 | route('ingredient.paginate') }}">
         Ingredients
     </a>
 </div>

@@ -7,14 +7,12 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(45deg, #ffffff, #fff2e3);
-  border-top: 5px solid #5edeb3;
+  border-top: 5px solid #ff6659;
 }
 
 .main {
-  align-items: center;
+  text-align: center;
   color: #000;
-  display: flex;
-  flex-direction: column;
   font-family: "San Fransisco", sans-serif;
   height: 100%;
   justify-content: center;

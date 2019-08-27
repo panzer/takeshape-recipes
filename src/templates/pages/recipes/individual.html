@@ -11,22 +11,29 @@
       <div class="recipe__description">
         {{ recipe.descriptionHtml | safe }}
       </div>
+      
+      <div class="recipe__ingredients">
+          <ul>
+              {% for ingredient in recipe.ingredients %}
+                <li>
+                  <a href="{{ingredient.ingredient | route('ingredient')}}">
+                    {{ingredient.ingredient.name}}
+                  </a>
+                  {% if ingredient.amount %} -- {{ingredient.amount}}{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+      </div>
 
-      <ul>
-        {% for ingredient in recipe.ingredients %}
-          <li>
-            {{ingredient.ingredient.name}}{% if ingredient.amount %} -- {{ingredient.amount}}{% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-
-      <ol>
-          {% for step in recipe.steps %}
-          <li>
-            <p>{{step.instruction}}</p>
-          </li>
-        {% endfor %}
-      </ol>
+      <div class="recipe__steps">
+          <ol>
+              {% for step in recipe.steps %}
+              <li>
+                <p>{{step.instruction}}</p>
+              </li>
+            {% endfor %}
+          </ol>
+      </div>
       
       {% if recipe.chefs or recipe.inspriationUrl %}
         <h2>Inspired by</h2>

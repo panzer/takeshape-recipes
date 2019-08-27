@@ -1,11 +1,40 @@
-.recipe {
-    display: flex;
-    flex-direction: column;
-    margin: 4rem;
+.recipes {
+    margin: 2rem;
     align-items: center;
 }
 
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.recipe__ingredients {
+    text-align: left;
+    margin: 1rem;
+}
+
+.recipe__steps {
+    text-align: left;
+    margin: 1rem;
+}
+
 .recipe__image {
-    width: 20rem;
-    
+    width: 16rem;
+    height: 16rem;
+}
+
+.recipe__preview {
+    text-align: center;
+    width: min-content;
+    margin: 0.5rem;
+}
+
+.recipe__preview__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }

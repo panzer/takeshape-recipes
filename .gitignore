@@ -8,6 +8,9 @@ build
 .cache
 graphql.config.json
 .githubtoken
+.graphqlconfig
 
 tsg-project.graphql
 package-lock.json
+
+*.DS_Store

@@ -1,14 +1,18 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-    <div class="container">
+    <div class="recipes">
         <h1>Recipes</h1>
-      {% for recipe in items %}
-          <a href="{{ recipe | route('recipe') }}">
-            <h2>{{ recipe.name }}</h2>
-            <p>{{recipe.descriptionHtml | safe}}</p>
-          </a>
-      {% endfor %}
+        <div class="recipe__preview__container">
+          {% for recipe in items %}
+          <div class="recipe__preview">
+            <a href="{{ recipe | route('recipe') }}">
+              <img src="{{ recipe.image | image({w:350, h:350, fit: 'crop', crop: 'edges'}) }} }}" class="recipe__image">
+              <p>{{ recipe.name }}</p>
+            </a>
+          </div>
+        {% endfor %}
+        </div>
     </div>
 
     {% set paginationString = 'recipe.paginate' %}

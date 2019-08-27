@@ -4,10 +4,13 @@
   <h1>{{ homepage.title }}</h1>
   {{ homepage.welcomeTextHtml | safe }}
   {% if homepage.featuredRecipe %}
-  <h3>Featured Recipe!</h3>
-  <div class="hero">
-    <img src="{{ homepage.featuredRecipe.image | image({w: 320, h: 240}) }}">
-    <p>{{ homepage.featuredRecipe.name }}</p>
+  <div class="recipe__preview__container">
+      <div class="recipe__preview">
+          <a href="{{ homepage.featuredRecipe | route('recipe') }}">
+            <img src="{{ homepage.featuredRecipe.image | image({fit: 'crop', crop: 'edges'}) }}" class="recipe__image">
+            <p>{{ homepage.featuredRecipe.name }}</p>
+          </a>
+      </div>
   </div>
   {% endif %}
 

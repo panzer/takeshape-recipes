@@ -14,7 +14,7 @@
     <ul class="pagination__list">
       <li><a {% if pagination.currentPage== 1 %}class="is-disabled"
              {% else %}href="{% if previousPage == 1 %}{{ paginationFirstPage }}{% else %}{{ previousPage | route(paginationString) }}{% endif %}"
-          {% endif %}><</a></li>
+          {% endif %}>←</a></li>
 
       <li><a {% if pagination.currentPage== firstPage %}class="is-current"
              {% else %}href="{{ paginationFirstPage }}" {% endif %}>1</a>
@@ -55,7 +55,7 @@
       {% endif %}
 
       <li><a {% if pagination.currentPage== pagination.totalPages %}class="is-disabled"
-             {% else %}href="{{ nextPage | route(paginationString) }}" {% endif %}>></a>
+             {% else %}href="{{ nextPage | route(paginationString) }}" {% endif %}>→</a>
       </li>
     </ul>
   </div>
